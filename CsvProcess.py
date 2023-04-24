@@ -1,8 +1,8 @@
 import pandas as pd
 from fuzzywuzzy import process
 
-animal_type = pd.read_csv('/Users/mahaoxuan/Downloads/archive (1)/class.csv')
-zoo = pd.read_csv('/Users/mahaoxuan/Downloads/archive (1)/zoo.csv')
+animal_type = pd.read_csv('class.csv')
+zoo = pd.read_csv('zoo.csv')
 
 
 def cleanData(animal_type, zoo):
