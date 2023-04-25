@@ -1,7 +1,12 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 25 12:51:12 2023
+@author: Nick, Samson, Masu (Team: Cold Brew)
+"""
 import re
 import requests
 from bs4 import BeautifulSoup
-
 
 def crawler():
     pitts_zoo_url = 'https://www.pittsburghzoo.org/animals/'

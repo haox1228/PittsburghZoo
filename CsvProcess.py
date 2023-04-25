@@ -1,9 +1,15 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 25 12:51:12 2023
+@author: Nick, Samson, Masu (Team: Cold Brew)
+"""
+
 import pandas as pd
 from fuzzywuzzy import process
 
 animal_type = pd.read_csv('class.csv')
 zoo = pd.read_csv('zoo.csv')
-
 
 def cleanData(animal_type, zoo):
     animal_type = animal_type.drop(['Number_Of_Animal_Species_In_Class', 'Animal_Names'], axis=1)
@@ -47,7 +53,7 @@ def matchAnimal(df, search):
 
         sentence += f", that {'needs' if matched_row['breathes'] == 1 else 'needs not'} to breathe."
 
-        return sentence
+        return matched_animal, sentence
     else:
-        return "No matching animal found, but try your luck at getting detail information feature"
+        return '', "No matching animal found, but try your luck at getting detail information feature"
 
