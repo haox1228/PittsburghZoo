@@ -6,7 +6,7 @@ The goal of this project is to develop an interactive and informative Python app
 ## User Instruction
 To get started with the project
 1. Clone the Github repository: git clone https://github.com/haox1228/PittsburghZoo.git
-2. Run main.py then using a python IDE e.g. PyCharm.
+2. Run main.py in a python IDE e.g. PyCharm.
 
 ## Contributor
 Haoxuan Ma <haoxuanm@andrew.cmu.edu>\
