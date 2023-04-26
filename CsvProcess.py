@@ -32,6 +32,7 @@ def show_stats(filtered_df):
     animal_count.plot(kind='bar')
     plt.title("Animal Count by Type (Bar chart)")
     plt.xlabel("Animal Type")
+    plt.xticks(rotation=30)
     plt.ylabel("Count")
     plt.show()
 
@@ -41,7 +42,22 @@ def show_stats(filtered_df):
     plt.title("Animal Count by Legs and Type (Box plot)")
     plt.suptitle("")
     plt.xlabel("Animal Type")
+    plt.xticks(rotation=30)
     plt.ylabel("Legs")
+    plt.show()
+
+    # bar chart for animal characteristics
+    animal_characters = filtered_df.sum()
+    # drop redundant rows
+    animal_characters.drop('animal_name', inplace=True)
+    animal_characters.drop('legs', inplace=True)
+    animal_characters.drop('type', inplace=True)
+
+    animal_characters.plot(kind='bar')
+    plt.title("Animal Characteristics")
+    plt.xlabel("Characteristics")
+    plt.xticks(rotation=30)
+    plt.ylabel("Count")
     plt.show()
 
     print('Your graph has been generated')
